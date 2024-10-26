@@ -14,8 +14,37 @@
   }
 }
 
-body {
+.scroll-bar {
   color: var(--foreground);
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+
+
+.scroll-bar {
+  --sb-track-color: #eef1f3;
+  --sb-thumb-color: #6BAF8D;
+  --sb-size: 4px;
+}
+
+.scroll-bar::-webkit-scrollbar {
+  width: var(--sb-size)
+}
+
+.scroll-bar::-webkit-scrollbar-track {
+  background: var(--sb-track-color);
+  border-radius: 1px;
+}
+
+.scroll-bar::-webkit-scrollbar-thumb {
+  background: var(--sb-thumb-color);
+  border-radius: 1px;
+
+}
+
+@supports not selector(::-webkit-scrollbar) {
+  .scroll-bar {
+    scrollbar-color: var(--sb-thumb-color) var(--sb-track-color);
+  }
 }
