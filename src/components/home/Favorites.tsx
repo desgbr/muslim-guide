@@ -18,7 +18,7 @@ function FavoritesList() {
           {count}
         </div>
       </div>
-      <div className="grid md:grid-cols-3 gap-4">
+      <div className="grid md:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-4">
         {favorite.length === 0 ? (
           <div className="col-span-full text-slate-300 text-xl md:text-2xl flex items-center justify-center rounded-md border p-4 md:p-8">
             لا يوجد عناصر في المفضلة

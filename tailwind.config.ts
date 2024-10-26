@@ -10,6 +10,7 @@ const config: Config = {
     extend: {
       fontFamily: {
         sans: ["var(--font-zain)"],
+        quran: ["var(--font-amiri)"],
       },
       colors: {
         background: "var(--background)",
