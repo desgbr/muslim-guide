@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
-import { Zain } from "next/font/google";
+import { Cairo } from "next/font/google";
 import "./globals.css";
 import Layout from "@/layout";
 
-const zain = Zain({
+const zain = Cairo({
   weight: ["400", "300", "700", "200", "300"],
   subsets: ["arabic"],
   variable: "--font-zain",

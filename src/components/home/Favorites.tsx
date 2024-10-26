@@ -10,9 +10,9 @@ function FavoritesList() {
   console.log("count, favorite", count, favorite);
   return (
     <div className="col-span-full">
-      <div className="flex gap-2 items-center">
-        <TitleComponent title="المفضلة" />
-        <div className="size-6 text-sm gap-4 rounded-full bg-sky-200 text-sky-950 flex items-center justify-center">
+      <div className="flex gap-2 items-center mb-4">
+        <TitleComponent title="المفضلة" className="mb-0" />
+        <div className="size-6 text-sm gap-4 rounded-full bg-emerald-200 text-emerald-950 flex items-center justify-center">
           {" "}
           {count}
         </div>

@@ -40,6 +40,7 @@ export const titles: Title[] = [
   {
     id: 2,
     title: "دعاء ُلبْس الثوب",
+    url: "/",
   },
   {
     id: 3,
