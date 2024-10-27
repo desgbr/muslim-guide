@@ -4,7 +4,7 @@ import useSWR from "swr";
 import {getTafseerList} from "@/services/quran/tafseer";
 import {Tafseer} from "@/types/tafseer";
 interface TafseerProps {
-  selectedTafseer: Tafseer | null;
+  selectedTafseer: Tafseer;
   setSelectedTafseer: (tafseer: Tafseer) => void;
 }
 export default function TafseerList({selectedTafseer, setSelectedTafseer} : TafseerProps) {
@@ -43,12 +43,12 @@ export default function TafseerList({selectedTafseer, setSelectedTafseer} : Tafs
           role="menu"
       >
           <div className="p-2 max-h-40 overflow-y-auto scroll-bar">
-            {data?.map((tafseer: Tafseer) => <button
+            {data?.map((tafseer: Tafseer, idx  ) => <button
                 onClick={() => {
                   setSelectedTafseer(tafseer)
                   setOpen(false)
                 }}
-                key={tafseer.id}
+                key={'tafseer-' + idx}
                 className="block rounded-lg px-4 py-2 text-sm text-gray-500 hover:bg-gray-50 hover:text-gray-700"
                 role="menuitem"
             >{tafseer.name}
