@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Cairo } from "next/font/google";
 import "./globals.css";
 import Layout from "@/layout";
+import Head from "next/head";
 
 const zain = Cairo({
   weight: ["400", "300", "700", "200", "300"],
@@ -23,9 +24,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ar" dir="rtl" className={`${zain.variable}`}>
-      <body>
-        <Layout>{children}</Layout>
-      </body>
+    <Head>
+      <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"/>
+    </Head>
+    <body>
+    <Layout>{children}</Layout>
+    </body>
     </html>
   );
 }
