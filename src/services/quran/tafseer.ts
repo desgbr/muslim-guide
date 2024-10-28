@@ -5,6 +5,9 @@ export const getTafseerList = async () : Promise<Tafseer[]> => {
     const config = {
         url: `http://api.quran-tafseer.com/tafseer/`,
         method: "GET",
+        headers:{
+            'Content-Security-Policy':'upgrade-insecure-requests'
+        }
     };
     try {
         const req = await axios(config);
@@ -18,6 +21,9 @@ export const getVerseTafseer = async (tafseer_id: number, sura_number: number, a
     const config = {
         url: `http://api.quran-tafseer.com/tafseer/${tafseer_id}/${sura_number}/${ayah_number}`,
         method: "GET",
+        headers:{
+            'Content-Security-Policy':'upgrade-insecure-requests'
+        }
     };
     try {
         const req = await axios(config);
